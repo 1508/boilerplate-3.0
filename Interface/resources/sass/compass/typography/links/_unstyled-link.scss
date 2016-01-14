@@ -1,0 +1,10 @@
+// A link that looks and acts like the text it is contained within
+@mixin unstyled-link {
+    cursor: inherit;
+    text-decoration: inherit;
+
+    color: inherit;
+    &:active, &:focus {
+        outline: none;
+    }
+}
