@@ -29,6 +29,6 @@
 //       #footer li
 //         +reset-float
 @mixin reset-float($display: block) {
-    display: $display; 
+    display: $display;
     float: none;
 }
