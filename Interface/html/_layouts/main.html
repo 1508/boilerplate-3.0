@@ -7,11 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="1508 boilerplate">
-    
-    <!-- @include favicons.html -->
-    
-    
-    <title>Ny Forside</title><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Side</title><meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Remove no-js enable html5 elements -->
     <script type="text/javascript">
         //Clear no-js
@@ -31,4 +28,19 @@
 <!--[if gt IE 9]><!-->
 <body>
 <!--<![endif]-->
-    <div class="content-container">
+    {{> global-header}}
+
+    <main>
+
+        {{> body  }}
+
+    </main>
+
+    {{> global-footer}}
+
+    <!-- build:js resources/js/script.js -->
+    <script data-main="resources/js/config" src="resources/js/libs/require.js"></script>
+    <!-- /build -->
+
+</body>
+</html>

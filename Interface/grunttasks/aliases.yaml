@@ -3,7 +3,7 @@ prototype:
     - 'copy:prototype'
     - 'sass:prototype'
     - 'autoprefixer:prototype'
-    - 'preprocess:prototype'
+    - 'assemble'
     - 'express:prototype'
     - 'open'
     - 'watchPrototype'
