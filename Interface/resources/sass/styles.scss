@@ -4,13 +4,8 @@
 // Foundation
 @import "core/settings";
 @import "scaffolding/foundation";
-@include foundation-everything;
 
-// Compass functions
-@import "compass/functions";
-@import "compass/utilities";
-@import "compass/typography";
-@import "compass/css3";
+@include foundation-everything;
 
 @import "core/core";
 
