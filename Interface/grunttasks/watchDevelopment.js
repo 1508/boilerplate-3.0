@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 
             scss: {
                 files: ['<%= package.resources %>/sass/**/*.scss'],
-                tasks: ['newer:csscomb', 'sass:development'],
+                tasks: ['newer:csscomb', 'sass:development', 'postcss:development'],
             },
 
             js: {
