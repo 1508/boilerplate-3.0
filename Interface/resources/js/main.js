@@ -1,10 +1,13 @@
 /*globals requirejs:false, window:false */
 
 requirejs([
+    
     'jquery',
     'foundation-loader',
     'module-example'
-], function ($) {
+
+], function ($, foundationLoader, moduleExample) {
+    
     'use strict';
 
     var onReady, onResize, afterResize, timer;
