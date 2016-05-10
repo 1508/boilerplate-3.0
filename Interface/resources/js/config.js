@@ -1,7 +1,9 @@
 /*globals requirejs:false */
 
 requirejs.config({
+    
     baseUrl: '/resources/js/modules',
+    
     paths: {
         
         'main':                                 '../main',
@@ -47,6 +49,7 @@ requirejs.config({
         'foundation.util.triggers':             '../libs/foundation/foundation.util.triggers'  
         
     },
+    
     shim: {
         'foundation':                           ['jquery'],
         'foundation.core':                      ['jquery'],
@@ -79,5 +82,7 @@ requirejs.config({
         'foundation.util.triggers':             ['foundation.core']
         
     },
+    
     deps: ['main', 'mouse-detect']
+
 });
