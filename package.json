@@ -22,12 +22,10 @@
     "grunt": "^1.0.1",
     "grunt-assemble": "^0.4.0",
     "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-compass": "^1.0.4",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^1.0.0",
     "grunt-contrib-requirejs": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-csscomb": "^3.1.0",
     "grunt-express": "^1.4.1",
     "grunt-newer": "^1.1.1",
     "grunt-open": "^0.2.3",
@@ -37,6 +35,8 @@
     "grunt-sass": "^1.1.0",
     "jit-grunt": "^0.10.0",
     "load-grunt-config": "^0.19.1",
+    "postcss-scss": "^0.1.7",
+    "postcss-sorting": "^1.4.0",
     "time-grunt": "^1.2.1"
   }
 }

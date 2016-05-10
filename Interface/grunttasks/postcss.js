@@ -1,8 +1,40 @@
 module.exports = {
 
     options: {
-        // inline sourcemaps
-        map: true
+        map: true  // inline sourcemaps
+    },
+
+    //Sort properties in  SCSS files
+    scss: {
+        options: {
+            map: false,
+            syntax: require('postcss-scss'),
+            processors: [
+                require('postcss-sorting')({
+                    "sort-order": "default",
+                    "empty-lines-between-children-rules": 0,
+                    "empty-lines-between-media-rules": 0,
+                    "preserve-empty-lines-between-children-rules": false
+                })
+            ]
+        },
+        
+        files: [{
+            expand: true,
+            filter: 'isFile',
+            cwd: '<%= package.resources %>/sass',
+            src: [
+                //Include all scss files
+                '**/*.scss',
+
+                //Except
+                '!**/core/_settings.scss',
+                '!**/scaffolding/**',
+                '!**/_variables.scss'
+            ],
+            dest: '<%= package.resources %>/sass'
+        }]
+        
     },
 
     prototype: {
@@ -16,9 +48,9 @@ module.exports = {
             ]
         },
 
-        src: '<%= package.prototyperesources %>/css/styles.css',
-        dest: '<%= package.prototyperesources %>/css/styles.css'
+        src: '<%= package.prototyperesources %>/css/styles.css'
     },
+
 
     development: {
         options: {
@@ -29,8 +61,7 @@ module.exports = {
                 })
             ]
         },
-        src: '<%= package.buildresources %>/css/styles.css',
-        dest: '<%= package.buildresources %>/css/styles.css'
+        src: '<%= package.buildresources %>/css/styles.css'
     },
 
     production: {
@@ -46,8 +77,7 @@ module.exports = {
             ]
         },
         files: [{
-            src: '<%= package.buildresources %>/css/styles.css',
-            dest: '<%= package.buildresources %>/css/styles.css'
+            src: '<%= package.buildresources %>/css/styles.css'
         }]
 
     }
