@@ -3,16 +3,17 @@
 requirejs.config({
     baseUrl: '/resources/js/modules',
     paths: {
-        'main':             '../main',
-        'almond':           '../libs/almond.0.3.2',
+        
+        'main':                                 '../main',
+        'almond':                               '../libs/almond.0.3.2',
         
         //Libs
-        'jquery':           '../libs/jquery-1.12.0.min',
-        'selectivizr':      '../libs/selectivizr-min',
-        'jquery.cookie':    '../libs/jquery.cookie',
+        'jquery':                               '../libs/jquery-1.12.0.min',
+        'selectivizr':                          '../libs/selectivizr-min',
+        'js.cookie':                            '../libs/js.cookie',
 
         //Plugins
-        'mouse-detect':     '../plugins/mouse-detect',
+        'mouse-detect':                         '../plugins/mouse-detect',
 
         // Foundation
         'foundation':                           '../libs/foundation/foundation',
@@ -43,8 +44,7 @@ requirejs.config({
         'foundation.util.nest':                 '../libs/foundation/foundation.util.nest',
         'foundation.util.timerAndImageLoader':  '../libs/foundation/foundation.util.timerAndImageLoader',
         'foundation.util.touch':                '../libs/foundation/foundation.util.touch',
-        'foundation.util.triggers':             '../libs/foundation/foundation.util.triggers'
-        
+        'foundation.util.triggers':             '../libs/foundation/foundation.util.triggers'  
         
     },
     shim: {
@@ -79,5 +79,5 @@ requirejs.config({
         'foundation.util.triggers':             ['foundation.core']
         
     },
-    deps: ['main', 'selectivizr', 'mouse-detect']
+    deps: ['main', 'mouse-detect']
 });
