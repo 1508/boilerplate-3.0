@@ -1,25 +1,28 @@
 module.exports = {
-    development:{
+
+    development: {
         options: {
-            name:'almond',
+            name: 'almond',
             wrap: true,
-            preserveLicenseComments:false,
+            preserveLicenseComments: false,
             baseUrl: "<%= package.resources %>/js/modules",
             mainConfigFile: "<%= package.resources %>/js/config.js",
             out: "<%= package.buildresources %>/js/script.js",
             optimize: "none"
-        }    
+        }
     },
-    production:{
+
+    production: {
         options: {
-            name:'almond',
+            name: 'almond',
             wrap: true,
-            preserveLicenseComments:false,
+            preserveLicenseComments: false,
             baseUrl: "<%= package.resources %>/js/modules",
             mainConfigFile: "<%= package.resources %>/js/config.js",
             out: "<%= package.buildresources %>/js/script.js",
-            optimize: "uglify2"
-        }    
-    } 
-};
+            //Optimization handled by a seperate uglify task
+            optimize: "none"
+        }
+    }
 
+};

@@ -20,11 +20,12 @@ dev:
 build:
     - 'clean:production'
     - 'copy:production'
-    - 'babel:production'
     - 'imagemin:production'
     - 'sass:production'
     - 'postcss:prototype'
     - 'requirejs:production'
+    - 'babel:production'
+    - 'uglify:production'
 
 optimize:
     - 'imagemin:originals'

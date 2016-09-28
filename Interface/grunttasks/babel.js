@@ -3,7 +3,10 @@
 */
 module.exports = {
     options: {
-        sourceMap: false
+        //No sourcemaps for Foundation files, as we dont need them
+        sourceMap: false,
+        //Prevent babel from trying to compact the output
+        compact: false
     },
 
     prototype: {
@@ -18,24 +21,14 @@ module.exports = {
     },
 
     development: {
-        files: [{
-            expand: true,
-            cwd: '<%= package.buildresources %>/js/libs/foundation',
-            src: [
-                '*.js'
-            ],
-            dest: '<%= package.buildresources %>/js/libs/foundation'
-        }]
+        files: {
+            '<%= package.buildresources %>/js/script.js': '<%= package.buildresources %>/js/script.js'
+        }
     },
 
     production: {
-        files: [{
-            expand: true,
-            cwd: '<%= package.buildresources %>/js/libs/foundation',
-            src: [
-                '*.js'
-            ],
-            dest: '<%= package.buildresources %>/js/libs/foundation'
-        }]
+        files: {
+            '<%= package.buildresources %>/js/script.js': '<%= package.buildresources %>/js/script.js'
+        }
     }
 }
