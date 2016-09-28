@@ -1,4 +1,4 @@
-umbraco:
+umbracoStylingPlugin:
     - 'clean:umbracoStyling'
     - 'copy:umbracoStyling'
     - 'sass_globbing:umbracoStyling'
@@ -24,7 +24,7 @@ dev:
 
     # If on a Umbraco project, enable the following target to generate styling for custom
     # content modules in umbraco
-    #- 'umbraco'
+    #- 'umbracoStylingPlugin'
 
     - 'watchDevelopment'
 
@@ -40,7 +40,7 @@ build:
 
     # If on a Umbraco project, enable the following target to generate styling for custom
     # content modules in umbraco
-    #- 'umbraco'
+    #- 'umbracoStylingPlugin'
 
 optimize:
     - 'imagemin:originals'
