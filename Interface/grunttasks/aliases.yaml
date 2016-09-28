@@ -1,6 +1,7 @@
 prototype:
     - 'clean:prototype'
     - 'copy:prototype'
+    - 'babel:prototype'
     - 'sass:prototype'
     - 'postcss:prototype'
     - 'assemble'
@@ -10,14 +11,16 @@ prototype:
 dev:
     - 'clean:development'
     - 'copy:development'
+    - 'babel:development'
     - 'requirejs:development'
     - 'sass:development'
-    - 'postcss:prototype'   
+    - 'postcss:prototype'
     - 'watchDevelopment'
 
 build:
     - 'clean:production'
     - 'copy:production'
+    - 'babel:production'
     - 'imagemin:production'
     - 'sass:production'
     - 'postcss:prototype'
