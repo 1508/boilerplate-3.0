@@ -11,10 +11,10 @@ prototype:
 dev:
     - 'clean:development'
     - 'copy:development'
-    - 'babel:development'
-    - 'requirejs:development'
     - 'sass:development'
-    - 'postcss:prototype'
+    - 'postcss:development'
+    - 'requirejs:development'
+    - 'babel:development'
     - 'watchDevelopment'
 
 build:
