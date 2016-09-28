@@ -1,5 +1,17 @@
 module.exports = {
-    prototype: { 
+
+    //Build stylesheet for Umbraco custom content modules
+    umbracoStyling: {
+        options: {
+            sourceMap: false,
+            outputStyle: 'nested'
+        },
+        files: {
+            '<%= package.build %>/App_Plugins/<%= package.umbracoStylingPlugin %>/css/styles.css': '<%= package.interfaceRoot %>/umbraco/css/styles.scss'
+        }
+    },
+
+    prototype: {
         options:{
             sourceMap: true,
             outputStyle: 'nested',
@@ -9,6 +21,7 @@ module.exports = {
             '<%= package.prototyperesources %>/css/styles.css': '<%= package.resources %>/sass/styles.scss'
         }
     },
+
     development: {
         options:{
             sourceMap: true,
@@ -19,6 +32,7 @@ module.exports = {
             '<%= package.buildresources %>/css/styles.css': '<%= package.resources %>/sass/styles.scss'
         }
     },
+
     production: {
         options:{
             sourceMap: false,

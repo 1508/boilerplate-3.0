@@ -1,3 +1,9 @@
+umbraco:
+    - 'clean:umbracoStyling'
+    - 'copy:umbracoStyling'
+    - 'sass_globbing:umbracoStyling'
+    - 'sass:umbracoStyling'
+
 prototype:
     - 'clean:prototype'
     - 'copy:prototype'
@@ -11,10 +17,15 @@ prototype:
 dev:
     - 'clean:development'
     - 'copy:development'
-    - 'babel:development'
     - 'requirejs:development'
+    - 'babel:development'
     - 'sass:development'
     - 'postcss:prototype'
+
+    # If on a Umbraco project, enable the following target to generate styling for custom
+    # content modules in umbraco
+    #- 'umbraco'
+
     - 'watchDevelopment'
 
 build:
@@ -26,6 +37,10 @@ build:
     - 'requirejs:production'
     - 'babel:production'
     - 'uglify:production'
+
+    # If on a Umbraco project, enable the following target to generate styling for custom
+    # content modules in umbraco
+    #- 'umbraco'
 
 optimize:
     - 'imagemin:originals'
