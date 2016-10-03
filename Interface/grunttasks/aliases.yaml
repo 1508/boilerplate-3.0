@@ -33,7 +33,7 @@ build:
     - 'copy:production'
     - 'imagemin:production'
     - 'sass:production'
-    - 'postcss:prototype'
+    - 'postcss:production'
     - 'requirejs:production'
     - 'babel:production'
     - 'uglify:production'
