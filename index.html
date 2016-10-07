@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Boilerplate-3.0 by 1508</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Boilerplate-3.0</h1>
+      <h2 class="project-tagline">Interface boilerplate with foundation 6</h2>
+      <a href="https://github.com/1508/boilerplate-3.0" class="btn">View on GitHub</a>
+      <a href="https://github.com/1508/boilerplate-3.0/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/1508/boilerplate-3.0/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="1508-interface-boilerplate-30" class="anchor" href="#1508-interface-boilerplate-30" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1508 Interface boilerplate 3.0</h1>
+
+<h1>
+<a id="how-to-install" class="anchor" href="#how-to-install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to install</h1>
+
+<p>Clone repository into the folder where you want to keep your interface files by running </p>
+
+<pre><code>git clone https://github.com/1508/boilerplate-3.0.git .
+</code></pre>
+
+<p>When that is done, you can delete the <code>.git</code> folder, to remove any traces of Git in the folder. Now the files are ready to be included in SVN in the solution you are working on.</p>
+
+<p>After this, be sure to run a <code>npm install</code> to get all dependencies installed.</p>
+
+<h1>
+<a id="how-to-build" class="anchor" href="#how-to-build" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to build</h1>
+
+<p>Out of the box, the setup comes with three build targets</p>
+
+<pre><code>npm run prototype
+npm run dev
+npm run build
+</code></pre>
+
+<h2>
+<a id="prototype-build-target" class="anchor" href="#prototype-build-target" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prototype build target</h2>
+
+<p>This will build sass into css and startup a local webserver to serve the index.html page. It is up to you to setup modules, pages etc. The point of this build target is to be able to build the solution locally, without a requirement for any backend.</p>
+
+<h2>
+<a id="dev-build-target" class="anchor" href="#dev-build-target" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dev build target</h2>
+
+<p>This target is meant to be run by the Teamcity CI server, and is used on our DEV site. The target will bundle all javascript files into one file, and it will bundle all SCSS files into one CSS file. This build does not use the HTML templates for anything, as it is meant to be used against the CMS.</p>
+
+<h2>
+<a id="build-build-target" class="anchor" href="#build-build-target" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build build target</h2>
+
+<p>This target is meant for production. It will bundle and minify JS into one file and SCSS into one file. This build does not use the HTML templates for anything, as it is meant to be used against the CMS.</p>
+
+<h1>
+<a id="whats-in-the-boilerplate" class="anchor" href="#whats-in-the-boilerplate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Whats in the boilerplate?</h1>
+
+<h2>
+<a id="javascript" class="anchor" href="#javascript" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Javascript</h2>
+
+<p>The boilerplate will give you a basic RequireJS driven setup. The main configuration for this is found in <code>Interface/resources/js/config.js</code> and the main file to kickstart everything is <code>Interface/resources/js/main.js</code>. </p>
+
+<h3>
+<a id="foundation-6-modules" class="anchor" href="#foundation-6-modules" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Foundation 6 modules</h3>
+
+<p>The setup also includes all javascript for Foundation 6 modules, but most if not all are disabled by default. If you need to enable any of them, it is done in the file <code>Interface/resources/js/modules/foundation-loader.js</code>.</p>
+
+<h2>
+<a id="scss" class="anchor" href="#scss" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SCSS</h2>
+
+<p>The boilerplate is build with Foundation 6 as a basic CSS framework. By default all modules except the basic grid is disabled. If you need to enable any Foundation modules, you can do that in the bottom of the file <code>Interface/resources/sass/scaffolding/foundation.scss</code>.</p>
+
+<h1>
+<a id="umbraco-styling-plugin" class="anchor" href="#umbraco-styling-plugin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Umbraco Styling Plugin</h1>
+
+<p>If you are to be using Umbraco as a CMS for the solution, you can enable a custom Umbraco module. This module enables you to create styling for custom umbraco modules that is then used in the Unbraco back-office. In short, its a way to style our custom modules!.</p>
+
+<p>First you need to make sure that the entry in <code>package.json</code> points to your Umbraco web project. You do this by editing <code>package.json</code>. Find the line <code>"build": "projectname",</code> and update it to be the name of your Umbraco website folder. For instance <code>"Spl.Sl.Web"</code>. The plugin in Umbraco will be called <code>1508 Styling</code> but the name can be changed by editing the line about <code>umbracoStylingPlugin</code> in <code>package.json</code>.</p>
+
+<h2>
+<a id="how-to-use-the-plugin" class="anchor" href="#how-to-use-the-plugin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use the plugin</h2>
+
+<p>The setup is quite simple. First you need to enable building of this module. That is done by in-commenting the umbracoStylingPlugin lines in the file <code>Interface/grunttasks/aliases.yaml</code>. There is a line for both the <code>dev</code> and the <code>production</code> builds. </p>
+
+<p>When this is enabled, grunt will build the Umbraco plugin, and place in the Umbraco folder, and Umbraco will automatically use it when starting up the website.</p>
+
+<h2>
+<a id="how-to-add-styling" class="anchor" href="#how-to-add-styling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to add styling</h2>
+
+<p>The setup is made so that if you create a SCSS file somewhere in the sass folder, and call it something that ends with <code>_umbraco.scss</code>, the contents of that file will be included in the Umbraco backend via the 1508 Styling plugin.</p>
+
+<p>So if you are makeing a custom module for an Image Gallery for the site, you would perhaps have a sass-file for the regular styling called  <code>_image-gallery.scss</code>. To make custom styling for this module in the Umbraco back-office, create a file called <code>_image-gallery_umbraco.scss</code>. Simple!</p>
+
+<p>In order for this to work, the backend module needs to output different markup in the frontend and in the backend. Troels and/or Patrick will know how to enable this when building the backend for the modules.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/1508/boilerplate-3.0">Boilerplate-3.0</a> is maintained by <a href="https://github.com/1508">1508</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
