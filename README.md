@@ -42,3 +42,22 @@ The setup also includes all javascript for Foundation 6 modules, but most if not
 ## SCSS
 
 The boilerplate is build with Foundation 6 as a basic CSS framework. By default all modules except the basic grid is disabled. If you need to enable any Foundation modules, you can do that in the bottom of the file `Interface/resources/sass/scaffolding/foundation.scss`.
+
+# Umbraco Styling Plugin
+
+If you are to be using Umbraco as a CMS for the solution, you can enable a custom Umbraco module. This module enables you to create styling for custom umbraco modules that is then used in the Unbraco back-office. In short, its a way to style our custom modules!.
+
+First you need to make sure that the entry in `package.json` points to your Umbraco web project. You do this by editing `package.json`. Find the line `"build": "projectname",` and update it to be the name of your Umbraco website folder. For instance `"Spl.Sl.Web"`. The plugin in Umbraco will be called `1508 Styling` but the name can be changed by editing the line about `umbracoStylingPlugin` in `package.json`.
+
+## How to use the plugin
+The setup is quite simple. First you need to enable building of this module. That is done by in-commenting the umbracoStylingPlugin lines in the file `Interface/grunttasks/aliases.yaml`. There is a line for both the `dev` and the `production` builds. 
+
+When this is enabled, grunt will build the Umbraco plugin, and place in the Umbraco folder, and Umbraco will automatically use it when starting up the website.
+
+## How to add styling
+
+The setup is made so that if you create a SCSS file somewhere in the sass folder, and call it something that ends with `_umbraco.scss`, the contents of that file will be included in the Umbraco backend via the 1508 Styling plugin.
+
+So if you are makeing a custom module for an Image Gallery for the site, you would perhaps have a sass-file for the regular styling called  `_image-gallery.scss`. To make custom styling for this module in the Umbraco back-office, create a file called `_image-gallery_umbraco.scss`. Simple!
+
+In order for this to work, the backend module needs to output different markup in the frontend and in the backend. Troels and/or Patrick will know how to enable this when building the backend for the modules.
