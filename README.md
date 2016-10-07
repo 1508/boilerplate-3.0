@@ -3,7 +3,11 @@
 
 # How to install
 
-Clone repository into the folder where you want to keep your interface files by running `git clone https://github.com/1508/boilerplate-3.0.git .`. When that is done, you can delete the `.git` folder, to remove any traces of Git in the folder. Now the files are ready to be included in SVN in the solution you are working on.
+Clone repository into the folder where you want to keep your interface files by running 
+```
+git clone https://github.com/1508/boilerplate-3.0.git .
+```
+When that is done, you can delete the `.git` folder, to remove any traces of Git in the folder. Now the files are ready to be included in SVN in the solution you are working on.
 
 After this, be sure to run a `npm install` to get all dependencies installed.
 
