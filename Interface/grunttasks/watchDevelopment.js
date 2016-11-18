@@ -7,8 +7,20 @@ module.exports = function(grunt) {
                 tasks: ['newer:copy:development']
             },
 
+            umbracoStyling: {
+                files: [
+                    '<%= package.resources %>/sass/umbraco.core.scss',
+                    '<%= package.resources %>/sass/**/*.umbraco.scss'
+                ],
+                tasks: ['sass_globbing:umbracoStyling', 'sass:umbracoStyling'],
+            },
+
             scss: {
-                files: ['<%= package.resources %>/sass/**/*.scss'],
+                files: [
+                    '<%= package.resources %>/sass/**/*.scss',
+                    '!<%= package.resources %>/sass/umbraco.core.scss',
+                    '!<%= package.resources %>/sass/**/*.umbraco.scss'
+                ],
                 tasks: ['newer:postcss:scss', 'sass:development', 'postcss:development'],
             },
 
