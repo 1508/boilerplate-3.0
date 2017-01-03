@@ -49,7 +49,7 @@ The boilerplate is build with Foundation 6 as a basic CSS framework. By default 
 
 # Umbraco Styling Plugin
 
-If you are to be using Umbraco as a CMS for the solution, you can enable a custom Umbraco module. This module enables you to create styling for custom umbraco modules that is then used in the Unbraco back-office. In short, its a way to style our custom modules!.
+If you are to be using Umbraco as a CMS for the solution, you can enable a custom Umbraco module. This module enables you to create styling for custom umbraco modules that is then used in the Unbraco back-office. In short, its a way to style our custom modules!
 
 First you need to make sure that the entry in `package.json` points to your Umbraco web project. You do this by editing `package.json`. Find the line `"build": "projectname",` and update it to be the name of your Umbraco website folder. For instance `"Spl.Sl.Web"`. The plugin in Umbraco will be called `1508 Styling` but the name can be changed by editing the line about `umbracoStylingPlugin` in `package.json`.
 
@@ -62,6 +62,6 @@ When this is enabled, grunt will build the Umbraco plugin, and place in the Umbr
 
 The setup is made so that if you create a SCSS file somewhere in the sass folder, and call it something that ends with `_umbraco.scss`, the contents of that file will be included in the Umbraco backend via the 1508 Styling plugin.
 
-So if you are makeing a custom module for an Image Gallery for the site, you would perhaps have a sass-file for the regular styling called  `_image-gallery.scss`. To make custom styling for this module in the Umbraco back-office, create a file called `_image-gallery_umbraco.scss`. Simple!
+So if you are makeing a custom module for an Image Gallery for the site, you would perhaps have a sass-file for the regular styling called  `_image-gallery.scss`. To make custom styling for this module in the Umbraco backend, create a file called `_image-gallery_umbraco.scss`. Simple!
 
 In order for this to work, the backend module needs to output different markup in the frontend and in the backend. Troels and/or Patrick will know how to enable this when building the backend for the modules.
