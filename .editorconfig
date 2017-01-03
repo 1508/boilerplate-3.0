@@ -17,9 +17,6 @@ indent_style = space
 [*.md]
 indent_size = 4
 
-[node_modules/**.js]
-codepaint = false
-
 [{package.json,.travis.yml}]
 indent_size = 2
 indent_style = space
