@@ -4,7 +4,7 @@ module.exports = {
         options: {
             port: 1508,
             protocol: 'http',
-            livereload: true
+            livereload: true,
             base: ['<%= package.prototype %>'],
             open: 'http://localhost:1508'
         }
