@@ -18,7 +18,7 @@ module.exports = {
                 })
             ]
         },
-        
+
         files: [{
             expand: true,
             filter: 'isFile',
@@ -34,12 +34,13 @@ module.exports = {
             ],
             dest: '<%= package.resources %>/sass'
         }]
-        
+
     },
 
     prototype: {
 
         options: {
+            map: true,
             processors: [
                 // add vendor prefixes
                 require('autoprefixer')({
@@ -54,6 +55,7 @@ module.exports = {
 
     development: {
         options: {
+            map: true,
             processors: [
                 // add vendor prefixes
                 require('autoprefixer')({
@@ -66,6 +68,7 @@ module.exports = {
 
     production: {
         options: {
+            map: false,
             processors: [
                 // add vendor prefixes
                 require('autoprefixer')({

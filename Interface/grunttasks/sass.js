@@ -14,7 +14,8 @@ module.exports = {
     prototype: {
         options:{
             sourceMap: true,
-            outputStyle: 'nested',
+            sourceComments: true,
+            outputStyle: 'expanded',
             imagePath: '<%= package.prototyperesources %>/images'
         },
         files: {
@@ -25,7 +26,8 @@ module.exports = {
     development: {
         options:{
             sourceMap: true,
-            outputStyle: 'nested',
+            sourceComments: true,
+            outputStyle: 'expanded',
             imagePath: '<%= package.buildresources %>/images'
         },
         files: {
