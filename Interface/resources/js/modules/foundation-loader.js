@@ -7,9 +7,11 @@
 define([
 
     'jquery',
+
     //Foundation core + must have dependencies
     'foundation.core',
     'foundation.util.mediaQuery',
+
     // Optional utils
     //'foundation.util.box',
     //'foundation.util.keyboard',
