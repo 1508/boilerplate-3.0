@@ -12,7 +12,7 @@ requirejs.config({
         'almond':                               '../libs/almond.0.3.3',
 
         //Libs
-        'jquery':                               '../libs/jquery-3.1.1.min',
+        'jquery':                               '../libs/jquery-3.2.1.min',
         'selectivizr':                          '../libs/selectivizr-min',
         'js.cookie':                            '../libs/js.cookie',
 
