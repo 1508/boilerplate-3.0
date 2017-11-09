@@ -9,7 +9,7 @@ requirejs.config({
     paths: {
 
         'main':                                 '../main',
-        'almond':                               '../libs/almond.0.3.2',
+        'almond':                               '../libs/almond.0.3.3',
 
         //Libs
         'jquery':                               '../libs/jquery-3.1.1.min',
