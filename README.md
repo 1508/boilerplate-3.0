@@ -13,6 +13,13 @@ After this, be sure to run a `npm install` to get all dependencies installed.
 
 # How to build
 
+## Requirements
+
+In order to run the build, you need to have `nodejs` installed in your machine. The boilerplate have been made for NodeJs version 6.x (the LTS version), and have been tested and use on Node 6.11.2.
+
+
+## Targets
+
 Out of the box, the setup comes with three build targets
 
 ```
