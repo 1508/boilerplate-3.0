@@ -6,7 +6,8 @@ module.exports = {
         //No sourcemaps for Foundation files, as we dont need them
         sourceMap: false,
         //Prevent babel from trying to compact the output
-        compact: false
+        compact: false,
+        presets: ['env']
     },
 
     prototype: {
