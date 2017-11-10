@@ -54,6 +54,10 @@ The setup also includes all javascript for Foundation 6 modules, but most if not
 
 The boilerplate is build with Foundation 6 as a basic CSS framework. By default all modules except the basic grid is disabled. If you need to enable any Foundation modules, you can do that in the bottom of the file `Interface/resources/sass/scaffolding/foundation.scss`.
 
+### Flexbox for grid settings
+
+To turn on flexbox for Foundation grid, set the property `$useFoundationFlexGrid` to true in `styles.scss`
+
 # Umbraco Styling Plugin
 
 If you are to be using Umbraco as a CMS for the solution, you can enable a custom Umbraco module. This module enables you to create styling for custom umbraco modules that is then used in the Unbraco back-office. In short, its a way to style our custom modules.

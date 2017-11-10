@@ -5,7 +5,11 @@
 @import "core/settings";
 @import "scaffolding/foundation";
 
-@include foundation-everything;
+// Enable this to turn on use of flexbox for the grid
+$useFoundationFlexGrid: false;
+
+// Include all enabled foundation parts @see /resources/sass/scaffolding/foundation.scss
+@include foundation-everything($flex: $useFoundationFlexGrid);
 
 @import "core/core";
 
