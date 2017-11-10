@@ -43,7 +43,7 @@ build:
     # content modules in umbraco
     #- 'umbracoStylingPlugin'
 
-#    - 'clean:tempBuild'
+    - 'clean:tempBuild'
 
 optimize:
     - 'imagemin:originals'
