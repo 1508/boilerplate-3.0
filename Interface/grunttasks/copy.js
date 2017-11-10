@@ -21,7 +21,30 @@ module.exports = function(grunt, options) {
 					});
 	            }
 	        }
-	    },
+        },
+
+        prototype: {
+            files: [{
+                //Fonts
+                expand: true,
+                cwd: '<%= package.resources %>/fonts/',
+                src: '**',
+                dest: '<%= package.prototyperesources %>/fonts'
+            }, {
+                //Javascript
+                expand: true,
+                cwd: '<%= package.resources %>/js/',
+                src: ['**/*.js'],
+                dest: '<%= package.prototyperesources %>/js'
+            }, {
+                //Images
+                expand: true,
+                cwd: '<%= package.resources %>/images/',
+                src: ['**/*.{png,jpg,gif,svg,ico}'],
+                dest: '<%= package.prototyperesources %>/images'
+
+            }]
+        },
 
 	    development: {
 	        files: [{
@@ -30,7 +53,13 @@ module.exports = function(grunt, options) {
 	            cwd: '<%= package.resources %>/fonts/',
 	            src: '**',
 	            dest: '<%= package.buildresources %>/fonts'
-	        }, {
+            },{
+                //Javascript
+                expand: true,
+                cwd: '<%= package.resources %>/js/',
+                src: ['**/*.js'],
+                dest: '<%= package.tempbuildresources %>/js'
+            },{
 	            //Javascript
 	            expand: true,
 	            cwd: '<%= package.resources %>/js/standalone/',
@@ -46,29 +75,6 @@ module.exports = function(grunt, options) {
 	        }]
 	    },
 
-	    prototype: {
-	        files: [{
-	            //Fonts
-	            expand: true,
-	            cwd: '<%= package.resources %>/fonts/',
-	            src: '**',
-	            dest: '<%= package.prototyperesources %>/fonts'
-	        }, {
-	            //Javascript
-	            expand: true,
-	            cwd: '<%= package.resources %>/js/',
-	            src: ['**/*.js'],
-	            dest: '<%= package.prototyperesources %>/js'
-	        }, {
-	            //Images
-	            expand: true,
-	            cwd: '<%= package.resources %>/images/',
-	            src: ['**/*.{png,jpg,gif,svg,ico}'],
-	            dest: '<%= package.prototyperesources %>/images'
-
-	        }]
-	    },
-
 	    production: {
 	        files: [{
 	            //Fonts
@@ -76,7 +82,13 @@ module.exports = function(grunt, options) {
 	            cwd: '<%= package.resources %>/fonts/',
 	            src: '**',
 	            dest: '<%= package.buildresources %>/fonts'
-	        }, {
+            }, {
+                //Javascript
+                expand: true,
+                cwd: '<%= package.resources %>/js/',
+                src: ['**/*.js'],
+                dest: '<%= package.tempbuildresources %>/js'
+            }, {
 	            //Javascript
 	            expand: true,
 	            cwd: '<%= package.resources %>/js/standalone/',

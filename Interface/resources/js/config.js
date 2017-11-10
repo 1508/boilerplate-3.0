@@ -31,6 +31,7 @@ requirejs.config({
         'foundation.util.timerAndImageLoader':  '../libs/foundation/foundation.util.timerAndImageLoader',
         'foundation.util.touch':                '../libs/foundation/foundation.util.touch',
         'foundation.util.triggers':             '../libs/foundation/foundation.util.triggers',
+
         // Foundation plugins
         'foundation.abide':                     '../libs/foundation/foundation.abide',
         'foundation.accordion':                 '../libs/foundation/foundation.accordion',

@@ -22,14 +22,25 @@ module.exports = {
     },
 
     development: {
-        files: {
-            '<%= package.buildresources %>/js/script.js': '<%= package.buildresources %>/js/script.js'
-        }
+        files: [{
+            expand: true,
+            cwd: '<%= package.tempbuildresources %>/js/libs/foundation',
+            src: [
+                '*.js'
+            ],
+            dest: '<%= package.tempbuildresources %>/js/libs/foundation'
+        }]
     },
 
     production: {
-        files: {
-            '<%= package.buildresources %>/js/script.js': '<%= package.buildresources %>/js/script.js'
-        }
+        files: [{
+            expand: true,
+            cwd: '<%= package.tempbuildresources %>/js/libs/foundation',
+            src: [
+                '*.js'
+            ],
+            dest: '<%= package.tempbuildresources %>/js/libs/foundation'
+        }]
     }
+
 }

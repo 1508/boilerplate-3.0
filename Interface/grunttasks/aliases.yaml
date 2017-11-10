@@ -19,13 +19,14 @@ dev:
     - 'copy:development'
     - 'sass:development'
     - 'postcss:development'
-    - 'requirejs:development'
     - 'babel:development'
+    - 'requirejs:development'
 
     # If on a Umbraco project, enable the following target to generate styling for custom
     # content modules in umbraco
     #- 'umbracoStylingPlugin'
 
+    - 'clean:tempBuild'
     - 'watchDevelopment'
 
 build:
@@ -34,13 +35,15 @@ build:
     - 'imagemin:production'
     - 'sass:production'
     - 'postcss:production'
-    - 'requirejs:production'
     - 'babel:production'
+    - 'requirejs:production'
     - 'uglify:production'
 
     # If on a Umbraco project, enable the following target to generate styling for custom
     # content modules in umbraco
     #- 'umbracoStylingPlugin'
+
+#    - 'clean:tempBuild'
 
 optimize:
     - 'imagemin:originals'

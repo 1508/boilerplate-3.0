@@ -6,6 +6,7 @@
   "root": ".",
   "build": "projectname",
   "buildresources": "projectname/resources",
+  "tempbuildresources": "projectname/resources/temp",
   "prototype": "_prototype",
   "prototyperesources": "_prototype/resources",
   "interfaceRoot": "Interface",

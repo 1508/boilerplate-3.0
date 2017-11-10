@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 
             js: {
                 files: ['<%= package.resources %>/js/**/*.js'],
-                tasks: ['requirejs:development'],
+                tasks: ['newer:copy:development', 'requirejs:development'],
             },
 
             jsstandalone: {

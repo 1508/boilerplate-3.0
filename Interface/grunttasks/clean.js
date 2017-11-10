@@ -13,6 +13,12 @@ module.exports = {
         src: ['<%= package.buildresources %>/**'],
     },
 
+    // Folder where javascript files are copied before being run through babel
+    // Is nessesary because of Foundation needing babel before it can be used in RequireJS
+    tempBuild: {
+        src: ['<%= package.tempbuildresources %>']
+    },
+
     production: {
         src: ['<%= package.buildresources %>/**'],
     },

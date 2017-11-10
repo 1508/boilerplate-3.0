@@ -5,8 +5,8 @@ module.exports = {
             name: 'almond',
             wrap: true,
             preserveLicenseComments: false,
-            baseUrl: "<%= package.resources %>/js/modules",
-            mainConfigFile: "<%= package.resources %>/js/config.js",
+            baseUrl: "<%= package.tempbuildresources %>/js/modules",
+            mainConfigFile: "<%= package.tempbuildresources %>/js/config.js",
             out: "<%= package.buildresources %>/js/script.js",
             optimize: "none"
         }
@@ -17,8 +17,8 @@ module.exports = {
             name: 'almond',
             wrap: true,
             preserveLicenseComments: false,
-            baseUrl: "<%= package.resources %>/js/modules",
-            mainConfigFile: "<%= package.resources %>/js/config.js",
+            baseUrl: "<%= package.tempbuildresources %>/js/modules",
+            mainConfigFile: "<%= package.tempbuildresources %>/js/config.js",
             out: "<%= package.buildresources %>/js/script.js",
             //Optimization handled by a seperate uglify task
             optimize: "none"
